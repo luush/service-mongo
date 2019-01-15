@@ -1,0 +1,21 @@
+server:
+  port: 20009
+eureka:
+  instance:
+    hostname: localhost
+  client:
+    service-url:
+      defaultZone: http://${eureka.instance.hostname}:28888/eureka/
+spring:
+  application:
+    name: service-mongo
+  data:
+    mongodb:
+    #第一种连接方式，用uri--  用户名：密码@ip：port/库名
+#      uri: mongodb://username:password@ip:port/database
+    #第二种连接方式，下面这种
+      port: 99999
+      username: your name
+      password: your password
+      database: your database
+      host: your host
